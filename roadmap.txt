@@ -1,0 +1,16 @@
+Amiga boot memory overlay :
+La solution utilisée par l'Amiga est la suivante : il existe un signal OVL issu du CIA-B (port A, broche 2) qui, de par son état, va modifier la configuration mémoire de l'Amiga par le biais de Gary comme suit :
+
+	OVL à l'état 0 : c'est la configuration normale où on trouve la mémoire Chip de $000000 à $07FFFF.
+	OVL à l'état 1 : utilisé lors de l'allumage de la bécane, on a alors la zone de mémoire Chip citée plus haut qui est masquée par la zone de ROM de $F80000 à SFFFFFF. 
+
+
+
+
+
+Amiga boot routine : http://obligement.free.fr/articles/routine_demarrage_amiga.php
+
+
+
+- Initialisation stack systeme (SP) : addresse $40000
+- Disable interrupts

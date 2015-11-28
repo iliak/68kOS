@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5B2BC83A-752C-490A-8AA2-B552BDECB44C}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+    <ProjectName>exec.library</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>make</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>make clean</NMakeCleanCommandLine>
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
+    <OutDir>$(ProjectDir)</OutDir>
+    <IntDir>$(ProjectDir)obj</IntDir>
+    <NMakeReBuildCommandLine>make</NMakeReBuildCommandLine>
+    <IncludePath>D:\dev\Amiga\toolchain\targets\m68k-amigaos\include;D:\dev\Amiga\toolchain\targets\m68k-amigaos\ndk\include_h</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>make all</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>make clean</NMakeCleanCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <BuildLog>
+      <Path>$(ProjectDir)obj\build.log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+    <None Include="src\colorbars.s" />
+    <None Include="src\romheader.s" />
+    <None Include="src\start.s" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AbortIO.c" />
+    <ClCompile Include="src\AddDevice.c" />
+    <ClCompile Include="src\AddHead.c" />
+    <ClCompile Include="src\AddIntServer.c" />
+    <ClCompile Include="src\AddLibrary.c" />
+    <ClCompile Include="src\AddMemList.c" />
+    <ClCompile Include="src\AddPort.c" />
+    <ClCompile Include="src\AddResource.c" />
+    <ClCompile Include="src\AddSemaphore.c" />
+    <ClCompile Include="src\AddTail.c" />
+    <ClCompile Include="src\AddTask.c" />
+    <ClCompile Include="src\Alert.c" />
+    <ClCompile Include="src\AllocAbs.c" />
+    <ClCompile Include="src\Allocate.c" />
+    <ClCompile Include="src\AllocMem.c" />
+    <ClCompile Include="src\AllocPooled.c" />
+    <ClCompile Include="src\AllocSignal.c" />
+    <ClCompile Include="src\AllocTrap.c" />
+    <ClCompile Include="src\AttemptSemaphore.c" />
+    <ClCompile Include="src\AvailMem.c" />
+    <ClCompile Include="src\blink.c" />
+    <ClCompile Include="src\Cause.c" />
+    <ClCompile Include="src\CheckIO.c" />
+    <ClCompile Include="src\CloseDevice.c" />
+    <ClCompile Include="src\CloseLibrary.c" />
+    <ClCompile Include="src\CopyMem.c" />
+    <ClCompile Include="src\CopyMemQuick.c" />
+    <ClCompile Include="src\CreateExtIO.c" />
+    <ClCompile Include="src\CreateIORequest.c" />
+    <ClCompile Include="src\CreateMsgPort.c" />
+    <ClCompile Include="src\CreatePool.c" />
+    <ClCompile Include="src\CreateTask.c" />
+    <ClCompile Include="src\Deallocate.c" />
+    <ClCompile Include="src\Debug.c" />
+    <ClCompile Include="src\DeleteExtIO.c" />
+    <ClCompile Include="src\DeleteIORequest.c" />
+    <ClCompile Include="src\DeleteMsgPort.c" />
+    <ClCompile Include="src\DeletePool.c" />
+    <ClCompile Include="src\DeleteTask.c" />
+    <ClCompile Include="src\Disable.c" />
+    <ClCompile Include="src\DoIO.c" />
+    <ClCompile Include="src\Enable.c" />
+    <ClCompile Include="src\Enqueue.c" />
+    <ClCompile Include="src\FindName.c" />
+    <ClCompile Include="src\FindPort.c" />
+    <ClCompile Include="src\FindSemaphore.c" />
+    <ClCompile Include="src\FindTask.c" />
+    <ClCompile Include="src\Forbid.c" />
+    <ClCompile Include="src\FreeMem.c" />
+    <ClCompile Include="src\FreePooled.c" />
+    <ClCompile Include="src\FreeSignal.c" />
+    <ClCompile Include="src\FreeTrap.c" />
+    <ClCompile Include="src\GetHead.c" />
+    <ClCompile Include="src\GetMsg.c" />
+    <ClCompile Include="src\Halt.c" />
+    <ClCompile Include="src\InitSemaphore.c" />
+    <ClCompile Include="src\Insert.c" />
+    <ClCompile Include="src\MakeLibrary.c" />
+    <ClCompile Include="src\NewList.c" />
+    <ClCompile Include="src\ObtainSemaphore.c" />
+    <ClCompile Include="src\ObtainSemaphoreList.c" />
+    <ClCompile Include="src\ObtainSemaphoreShared.c" />
+    <ClCompile Include="src\OpenDevice.c" />
+    <ClCompile Include="src\OpenLibrary.c" />
+    <ClCompile Include="src\OpenResource.c" />
+    <ClCompile Include="src\Permit.c" />
+    <ClCompile Include="src\PutMsg.c" />
+    <ClCompile Include="src\ReleaseSemaphore.c" />
+    <ClCompile Include="src\ReleaseSemaphoreList.c" />
+    <ClCompile Include="src\RemHead.c" />
+    <ClCompile Include="src\RemIntServer.c" />
+    <ClCompile Include="src\RemLibrary.c" />
+    <ClCompile Include="src\Remove.c" />
+    <ClCompile Include="src\RemPort.c" />
+    <ClCompile Include="src\RemResource.c" />
+    <ClCompile Include="src\RemSemaphore.c" />
+    <ClCompile Include="src\RemTail.c" />
+    <ClCompile Include="src\RemTask.c" />
+    <ClCompile Include="src\ReplyMsg.c" />
+    <ClCompile Include="src\SetFunction.c" />
+    <ClCompile Include="src\SetIntVector.c" />
+    <ClCompile Include="src\SetSignal.c" />
+    <ClCompile Include="src\SetTaskPri.c" />
+    <ClCompile Include="src\Signal.c" />
+    <ClCompile Include="src\SumLibrary.c" />
+    <ClCompile Include="src\test.c" />
+    <ClCompile Include="src\TypeOfMem.c" />
+    <ClCompile Include="src\Wait.c" />
+    <ClCompile Include="src\WaitIO.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
